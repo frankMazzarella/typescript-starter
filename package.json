@@ -1,7 +1,7 @@
 {
   "name": "typescript-starter",
   "version": "0.1.0",
-  "description": "A simple and opinionated TS starter for node",
+  "description": "A simple and opinionated TS/Express starter for Node.js",
   "main": "dist/app.js",
   "scripts": {
     "start": "node .",
@@ -11,6 +11,13 @@
   "author": "Frank Mazzarella <mazzarella.frank@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
     "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.0",
+    "@types/express": "^4.17.6",
+    "@types/node": "^14.0.5"
   }
 }

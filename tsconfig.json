@@ -3,7 +3,8 @@
     "strict": true,
     "module": "commonjs",
     "sourceMap": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*"
