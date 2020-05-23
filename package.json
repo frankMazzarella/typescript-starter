@@ -1,0 +1,16 @@
+{
+  "name": "typescript-starter",
+  "version": "0.1.0",
+  "description": "A simple and opinionated TS starter for node",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "node .",
+    "compile": "./node_modules/.bin/tsc"
+  },
+  "keywords": [],
+  "author": "Frank Mazzarella <mazzarella.frank@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.9.3"
+  }
+}
