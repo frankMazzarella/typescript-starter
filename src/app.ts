@@ -3,7 +3,13 @@ import express from 'express';
 import fs from 'fs';
 import os from 'os';
 
+import router from './router';
+import LoggerService from './services/Logger.service';
+import SecretsService from './services/Secrets.service';
+
+const logger = new LoggerService('app');
 handleErrors();
+SecretsService.validateEnvars();
 initServer();
 
 // TODO: verify these log correctly
@@ -26,8 +32,9 @@ function initServer() {
   const app = express();
   const port = 3000;
   app.use(compression());
+  app.use('/api/v1', router);
   app.get('/healthcheck', (req, res) => res.send({ uptime: process.uptime() }));
   app.listen(port, () => {
-    console.log(`${packageJson.name} v${packageJson.version} has started on port ${port} [host: ${os.hostname}]`);
+    logger.info(`${packageJson.name} v${packageJson.version} has started on port ${port} [host: ${os.hostname}]`);
   });
 }

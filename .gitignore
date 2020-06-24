@@ -1,2 +1,7 @@
 node_modules
 dist
+.env
+
+# miscellaneous
+.DS_Store
+Thumbs.db
