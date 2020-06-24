@@ -30,7 +30,7 @@ function handleErrors() {
 function initServer() {
   const packageJson = JSON.parse(fs.readFileSync('package.json').toString());
   const app = express();
-  const port = 3000;
+  const port = SecretsService.env.PORT;
   app.use(compression());
   app.use('/api/v1', router);
   app.get('/healthcheck', (req, res) => res.send({ uptime: process.uptime() }));
